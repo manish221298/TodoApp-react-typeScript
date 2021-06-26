@@ -16,7 +16,15 @@ const Form: FC = () => {
       setTodoList([...todoList, newTask]);
       setTask("");
     };
-  
+
+    const deleteTask = (deleteTaskName: string): void => {
+        setTodoList(
+            todoList.filter((task) => {
+                return task.taskName !== deleteTaskName
+            })
+        )
+    }  
+
     return (
       <div className="App">
         <div className="header">
@@ -35,7 +43,7 @@ const Form: FC = () => {
             <h2>List of Types</h2>
         {
             todoList.map((task : ITask) => {
-                return <TodoList task={task}  />
+                return <TodoList task={task} deleteTask={deleteTask} />
             })
         }
         </div>
