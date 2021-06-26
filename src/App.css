@@ -3,13 +3,14 @@
   padding: 0;
 }
 .row {
-  padding-top: 8rem;
+  padding-top: 8.5rem;
+  padding-bottom: 8.5rem;
 }
 .App {
-  text-align: center;
+  background-color: black;
 }
 .todo-border {
-  border: 2px solid red;
+  border: 2px solid rgb(73, 73, 73);
   height: 25rem;
   background-color: rgb(155, 153, 153);
 }
@@ -20,8 +21,51 @@
 .button {
   width: 100%;
 }
-.text {
+
+.task {
+  width: 280px;
+  height: 50px;
+  display: flex;
+  color: white;
+  margin: 15px;
+}
+
+.task .content {
+  flex: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task .content span {
+  display: grid;
+  place-items: center;
+  border: 1px solid white;
   width: 100%;
-  border: 1px solid rgb(12, 6, 6);
-  background-color: fuchsia;
+  height: 100%;
+  font-size: 18px;
+  border-right: none;
+  background-color: tomato;
+}
+
+.task button {
+  flex: 20%;
+  height: 100%;
+  border: none;
+  background-color: lightseagreen;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.scroll {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.small-scroll {
+  max-height: 100px;
+  overflow-y: auto;
 }

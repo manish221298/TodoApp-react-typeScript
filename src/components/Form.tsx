@@ -40,7 +40,7 @@ const Form: FC = () => {
           </div>
           
         </div>
-        <div>
+        <div className="scroll">
             <h2>List of Tasks</h2>
         {
             todoList.map((task : ITask) => {
