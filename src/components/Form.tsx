@@ -26,21 +26,22 @@ const Form: FC = () => {
     }  
 
     return (
-      <div className="App">
-        <div className="header">
+      <div>
+        <div >
           <div className="inputContainer">
-            <input
+            <input className="form-control mt-4 form-control-lg"
               type="text"
               placeholder="Enter your task"
               name="task"
               value={task}
               onChange={handleChange}
             />
+            <button className="btn mt-2 mb-2 btn-secondary btn-lg btn-block button" onClick={addTask}>Add Task</button>
           </div>
-          <button onClick={addTask}>Add Task</button>
+          
         </div>
         <div>
-            <h2>List of Types</h2>
+            <h2>List of Tasks</h2>
         {
             todoList.map((task : ITask) => {
                 return <TodoList task={task} deleteTask={deleteTask} />

@@ -9,9 +9,9 @@ interface Props {
 const TodoList = ({task, deleteTask}: Props) => {
     return (
         <div>
-            <div>
-            <span>{task.taskName}</span>
-            <button 
+            <div className="text">
+            <span className="cross text-right">{task.taskName}</span>
+            <button className="cross text-right"
                 onClick = {() => {
                     deleteTask(task.taskName);
                 }}
